@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Algorithm Visualizer</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+  <h1>Algorithm visualizer</h1>
+  <nav>
+    <button data-tab="sort" class="on">Sorting</button>
+    <button data-tab="path">Pathfinding</button>
+    <label class="speed">Speed <input id="speed" type="range" min="1" max="100" value="30"></label>
+  </nav>
+
+  <section id="sort">
+    <div class="bar">
+      <label>Array size <output id="osn">50</output><input id="sn" type="range" min="10" max="150" value="50"></label>
+      <button id="sgo">Start</button>
+      <button id="snew">New array</button>
+    </div>
+    <div class="row">
+      <figure><figcaption>Bubble sort <small>O(n²)</small></figcaption><canvas id="cv-bubble" width="300" height="200"></canvas><p id="st-bubble"></p></figure>
+      <figure><figcaption>Merge sort <small>O(n log n)</small></figcaption><canvas id="cv-merge" width="300" height="200"></canvas><p id="st-merge"></p></figure>
+      <figure><figcaption>Quick sort <small>O(n log n) average</small></figcaption><canvas id="cv-quick" width="300" height="200"></canvas><p id="st-quick"></p></figure>
+    </div>
+    <p class="note">Same starting array for all three. Writes count assignments to the array (a swap is 2).</p>
+    <div class="bar">
+      <button id="bench">Run timing benchmark</button>
+      <span id="bstat">Times each algorithm on 500 to 8000 random numbers without animation.</span>
+    </div>
+    <pre id="bout" hidden></pre>
+  </section>
+
+  <section id="path" hidden>
+    <div class="bar">
+      <button id="pgo">Run</button>
+      <button id="preset">Reset search</button>
+      <button id="prand">Random walls</button>
+      <button id="pclear">Clear walls</button>
+    </div>
+    <p class="note">Drag on the grid to draw or erase walls. Drag the green start or red goal to move them.</p>
+    <div class="row">
+      <figure><figcaption>Dijkstra</figcaption><canvas id="cv-dij" width="648" height="396"></canvas><p id="ps-dij"></p></figure>
+      <figure><figcaption>A* <small>Manhattan heuristic</small></figcaption><canvas id="cv-astar" width="648" height="396"></canvas><p id="ps-astar"></p></figure>
+    </div>
+  </section>
+</main>
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+:root{--bg:#10151c;--panel:#18202b;--ink:#e6edf3;--mute:#8b98a8;--line:#2a3544;--acc:#4c9be8}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 "Segoe UI",system-ui,sans-serif}
+main{max-width:1000px;margin:0 auto;padding:24px 16px 48px}
+h1{font-size:1.8rem;margin:0 0 12px;letter-spacing:-.01em}
+nav,.bar{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin-bottom:14px}
+.speed{margin-left:auto}
+button{background:var(--line);color:var(--ink);border:0;border-radius:4px;padding:8px 16px;font:inherit;cursor:pointer}
+button:hover{background:#364457}
+button.on{background:var(--acc);color:#07121f}
+button:focus-visible,input:focus-visible{outline:2px solid var(--acc);outline-offset:2px}
+label{font-size:.9rem;color:var(--mute);display:flex;align-items:center;gap:8px}
+output{min-width:2.2em;color:var(--ink)}
+input[type=range]{accent-color:var(--acc)}
+.row{display:flex;flex-wrap:wrap;gap:14px}
+figure{flex:1 1 280px;margin:0}
+figcaption{font-weight:600;margin-bottom:6px}
+figcaption small{color:var(--mute);font-weight:400;margin-left:6px}
+canvas{display:block;width:100%;height:auto;background:var(--panel);border:1px solid var(--line);border-radius:6px;touch-action:none}
+figure p{margin:6px 0 0;font-size:.85rem;color:var(--mute);font-variant-numeric:tabular-nums;min-height:3em}
+.note{color:var(--mute);font-size:.85rem;margin:4px 0 14px}
+#bstat{color:var(--mute);font-size:.85rem}
+pre{background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:12px;overflow-x:auto;font-size:.8rem;user-select:all}
